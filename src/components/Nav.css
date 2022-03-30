@@ -1,0 +1,15 @@
+mgt-login {
+    --font-size: 14px;
+    --font-weight: 600;
+    --weith: '100%';
+    --height: '100%';
+    --margin: 0;
+    --padding: 12px 20px;
+    --button-color: white;
+    --button-color--hover: var(--theme-primary-color);
+    --button-background-color: transparent;
+    --button-background-color--hover: #edebe9;
+    --popup-background-color: white;
+    --popup-command-font-size: 12px;
+    --popup-color: #201f1e;
+  }

@@ -1,38 +1,91 @@
-.App {
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+}
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.12fr .46fr .25fr 2.0fr 0.10fr;
+  grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "content content content"
+    "main main main"
+    "footer footer footer";
+  grid-gap: 0.2rem;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  color:#494847;
+}
+.nav {
+  background: #0078d4;
+  grid-area: nav;
+}
+.logo{
+  padding:5px;
+  width: 150px; 
+ 
+}
+.search-box{
+  width:60%;
+  color:blue;
+}
+.login-right{
+  background: red;
+
+}
+#header{
+  background:#f3f9fd;
+  grid-area: header;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header h1{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+#header p{  
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+main {
+  background:#ffffff;
+  grid-area: main;
+}
+#content {
+  background:#ffffff;
+  grid-area: content;
+}
+footer {
+  background: #f4f4f4;
+  grid-area: footer;
+}
+.footer-right{
+  float: right; 
+ margin:auto;
+ margin-right:5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.12fr .35fr .25fr 2.0fr 0.15fr;
+    grid-template-areas:
+      "nav"
+      "header"
+      "content"
+      "main"      
+      "footer";
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  #Logo{
+    padding:5px;
+    width: 75px; 
   }
 }

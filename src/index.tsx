@@ -2,8 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Providers } from '@microsoft/mgt-element';
+import { Msal2Provider } from '@microsoft/mgt-msal2-provider';
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
 
+Providers.globalProvider = new Msal2Provider({
+  clientId: 'b014034a-6286-4e3e-8360-91979c064e42'
+});
+
+initializeIcons();
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -11,7 +18,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
